@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+tailwind.config = {
+theme: {
+extend: {
+fontFamily: {
+heading: ['"Lora"', 'serif'],
+body: ['Poppins', 'sans-serif'],
+}
+}
+}
+}
+</script>
+<style>
+html {
+scroll-behavior: smooth;
+}
+</style>
+    <title>South Delights</title>
+  </head>
+  <body class="bg-gray-950 text-white font-body">
+    <nav class="bg-black border-b border-gray-800">
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+       <div class="flex items-center space-x-3">
+
+<img src="logo.png "  class="rounded-full w-10 h-10">
+
+<h1 class="font-heading text-3xl font-bold text-yellow-400">
+South Delights
+</h1>
+
+</div>
+        <ul class="hidden md:flex space-x-6">
+          <li class="hover:text-yellow-400 cursor-pointer">Home</li>
+          <li class="hover:text-yellow-400 cursor-pointer">Menu</li>
+          <li class="hover:text-yellow-400 cursor-pointer">About</li>
+          <li class="hover:text-yellow-400 cursor-pointer">Gallery</li>
+        </ul>
+        <button id="ordersBtn" class="bg-yellow-400 text-black px-5 py-2 rounded-lg hover:bg-yellow-300">
+ Orders (<span id="cartCount">0</span>)
+</button>
+      </div>
+    </nav>
+    <section class="py-20">
+      <div
+        class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center"
+      >
+        <div>
+          <h2 class="font-heading text-5xl font-bold mb-6">
+            Tasty and Delicious South Indian Food
+          </h2>
+          <p class="text-gray-400 mb-6">
+            Idly,Dosa,vada,Puri and Veg and Non-Veg meals served daily.
+          </p>
+          <button
+            class="bg-yellow-400 text-black px-5 py-2 my-2 rounded-lg hover:bg-yellow-300"
+          >
+            Order Now
+          </button>
+        </div>
+        <img class="w-full rounded-xl shadow-lg" src="banner2.jpeg" />
+      </div>
+    </section>
+
+   <section class="bg-gray-900 py-16">
+
+<h2 class="font-heading text-3xl font-bold text-center mb-10">
+Our Popular South Indian Dishes
+</h2>
+
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+
+
+<div class="bg-gray-800 rounded-xl overflow-hidden hover:scale-110 transition duration-300">
+<img class="w-full h-40 object-cover"
+src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976">
+
+<div class="p-6">
+<h3 class="font-heading text-xl font-bold mb-2">Masala Dosa</h3>
+<p class="text-gray-400">Crispy dosa with potato masala</p>
+
+<div class="flex justify-between mt-4">
+<span class="text-yellow-400 font-bold">₹100</span>
+<button class= "addCart bg-yellow-400 text-black px-4 py-1 rounded ">Add to Cart</button>
+</div>
+</div>
+</div>
+
+
+
+<div class="bg-gray-800 rounded-xl overflow-hidden hover:scale-110 transition duration-300">
+<img class="w-full h-40 object-cover"
+src="https://images.unsplash.com/photo-1601050690597-df0568f70950">
+
+<div class="p-6">
+<h3 class="font-heading text-xl font-bold mb-2">Idli</h3>
+<p class="text-gray-400">Soft steamed rice cakes</p>
+
+<div class="flex justify-between mt-4">
+<span class="text-yellow-400 font-bold">₹60</span>
+<button class="addCart bg-yellow-400 text-black px-4 py-1 rounded">Add to Cart</button>
+</div>
+</div>
+</div>
+
+
+
+<div class="bg-gray-800 rounded-xl overflow-hidden hover:scale-110 transition duration-300">
+<img class="w-full h-40 object-cover"
+src="vada.jpg">
+
+<div class="p-6">
+<h3 class="font-heading text-xl font-bold mb-2">Crispy Medu Vada</h3>
+<p class="text-gray-400">Crispy lentil donuts</p>
+
+<div class="flex justify-between mt-4">
+<span class="text-yellow-400 font-bold">₹50</span>
+<button class="addCart bg-yellow-400 text-black px-4 py-1 rounded">Add to Cart</button>
+</div>
+</div>
+</div>
+
+
+
+<div class="bg-gray-800 rounded-xl overflow-hidden hover:scale-110 transition duration-300">
+<img class="w-full h-40 object-cover"
+src="puri.jpeg">
+
+<div class="p-6">
+<h3 class="font-heading text-xl font-bold mb-2">Puri</h3>
+<p class="text-gray-400">Soft and Delicious</p>
+
+<div class="flex justify-between mt-4">
+<span class="text-yellow-400 font-bold">₹60</span>
+<button class="addCart bg-yellow-400 text-black px-4 py-1 rounded">Add to Cart</button>
+</div>
+</div>
+</div>
+
+
+<div class="bg-gray-800 rounded-xl overflow-hidden hover:scale-110 transition duration-300">
+<img class="w-full h-40 object-cover"
+src="bonda.jpeg">
+
+<div class="p-6">
+<h3 class="font-heading text-xl font-bold mb-2">Bonda</h3>
+<p class="text-gray-400">Tasty and Crispy</p>
+
+<div class="flex justify-between mt-4">
+<span class="text-yellow-400 font-bold">₹40</span>
+<button class="addCart bg-yellow-400 text-black px-4 py-1 rounded">Add to Cart</button>
+</div>
+</div>
+</div>
+
+
+
+<div class="bg-gray-800 rounded-xl overflow-hidden hover:scale-110 transition duration-300">
+<img class="w-full h-40 object-cover"
+src="vegmeals.jpeg">
+
+<div class="p-6">
+<h3 class="font-heading text-xl font-bold mb-2">Veg Meals</h3>
+<p class="text-gray-400">Delicious Veg Thali</p>
+
+<div class="flex justify-between mt-4">
+<span class="text-yellow-400 font-bold">₹600</span>
+<button class="addCart bg-yellow-400 text-black px-4 py-1 rounded">Add to Cart</button>
+</div>
+</div>
+</div>
+
+
+
+<div class="bg-gray-800 rounded-xl overflow-hidden hover:scale-110 transition duration-300">
+<img class="w-full h-40 object-cover"
+src="nonveg.jpeg">
+
+<div class="p-6">
+<h3 class="font-heading text-xl font-bold mb-2">Non-Veg Thali</h3>
+<p class="text-gray-400">Unlimited Taste with best price ever</p>
+
+<div class="flex justify-between mt-4">
+<span class="text-yellow-400 font-bold">₹600</span>
+<button class="addCart bg-yellow-400 text-black px-4 py-1 rounded">Add to Cart</button>
+</div>
+</div>
+</div>
+
+
+</div>
+</section>
+
+
+    <section class="py-16">
+
+<h2 class="font-heading text-3xl font-bold text-center mb-10">
+Food Gallery
+</h2>
+
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-3 gap-4">
+
+
+
+
+
+<img class="rounded-lg hover:scale-110 transition duration-300"
+src="vegmeals.jpeg">
+
+<img class="rounded-lg hover:scale-110 transition duration-300"
+src="nonveg.jpeg">
+
+
+
+<img class="rounded-lg hover:scale-110 transition duration-300"
+src="https://images.unsplash.com/photo-1601050690597-df0568f70950">
+
+<img class="rounded-lg hover:scale-110 transition duration-300"
+src="banner.jpeg">
+
+<img class="rounded-lg hover:scale-110 transition duration-300"
+src="https://images.unsplash.com/photo-1511920170033-f8396924c348">
+
+</div>
+
+</section>
+
+<section class="bg-gray-900 py-16">
+
+<h2 class="font-heading text-3xl font-bold text-center mb-10">
+Customer Reviews
+</h2>
+
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+
+<div class="bg-gray-800 p-6 rounded-xl">
+
+<p class="text-gray-300">
+Best dosa in the city! The taste is amazing and authentic.
+</p>
+
+<h4 class="mt-4 text-yellow-400 font-bold">
+– Karthik Varma
+</h4>
+
+</div>
+
+<div class="bg-gray-800 p-6 rounded-xl">
+
+<p class="text-gray-300">
+Loved the filter coffee and idli. Highly recommended!
+</p>
+
+<h4 class="mt-4 text-yellow-400 font-bold">
+– Priya
+</h4>
+
+</div>
+
+<div class="bg-gray-800 p-6 rounded-xl">
+
+<p class="text-gray-300">
+Very tasty food and great service. Will visit again!
+</p>
+
+<h4 class="mt-4 text-yellow-400 font-bold">
+– Manoj Sri Ram
+</h4>
+
+</div>
+
+<div class="bg-gray-800 p-6 rounded-xl">
+
+<p class="text-gray-300">
+Delicious and tasty good and good service. Will visit again! 
+</p>
+
+<h4 class="mt-4 text-yellow-400 font-bold">
+– Satwik
+</h4>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="py-16">
+
+<h2 class="font-heading text-3xl font-bold text-center mb-10">
+Place Your Order
+</h2>
+
+<div class="max-w-xl mx-auto px-6">
+
+<form id= "orderForm" class="space-y-4">
+
+<input
+class="w-full p-3 rounded bg-gray-800 border border-gray-700"
+type="text"
+placeholder="Your Name">
+
+<input
+class="w-full p-3 rounded bg-gray-800 border border-gray-700"
+type="tel"
+placeholder="Phone Number">
+
+<input
+class="w-full p-3 rounded bg-gray-800 border border-gray-700"
+type="text"
+placeholder="Address">
+
+<select
+class="w-full p-3 rounded bg-gray-800 border border-gray-700">
+
+<option>Select Your Dishes</option>
+<option>Masala Dosa</option>
+<option>Idli</option>
+<option> Vada</option>
+<option>Puri</option>
+<option>Filter Coffee</option>
+<option>Samosa</option>
+<option>Veg Meals</option>
+<option>Non-Veg Meals</option>
+
+</select>
+
+<input
+class="w-full p-3 rounded bg-gray-800 border border-gray-700"
+type="number"
+placeholder="Quantity">
+
+<button
+class="w-full bg-yellow-400 text-black py-3 rounded hover:bg-yellow-300">
+
+Submit Order
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<section class="bg-gray-900 py-16">
+
+<h2 class="font-heading text-3xl font-bold text-center mb-10">
+Find Our Restaurant
+</h2>
+
+<div class="max-w-6xl mx-auto px-6">
+
+<iframe
+class="w-full h-80 rounded-xl"
+src="https://maps.google.com/maps?q=chennai&t=&z=13&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+</div>
+
+
+<footer class="bg-black text-center py-6 mt-8 text-gray-400">
+
+<p>
+© 2026 South Delights Restaurant
+</p>
+
+<p class="mt-2">
+Authentic South Indian Taste
+</p>
+
+</footer>
+
+<script>
+
+let cartCount = 0;
+
+const buttons = document.querySelectorAll(".addCart");
+const counter = document.getElementById("cartCount");
+
+buttons.forEach(btn => {
+
+btn.addEventListener("click", () => {
+
+cartCount++;
+
+counter.textContent = cartCount;
+
+});
+
+});
+
+document.getElementById("orderForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+alert(" Thank you! Your order has been placed 😄");
+
+});
+
+</script>
+
+  </body>
+</html>
