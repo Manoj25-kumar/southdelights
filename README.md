@@ -27,3 +27,5 @@ Tailwind CSS
 JavaScript
 
 Google Fonts
+
+its Awesome website
